@@ -3,15 +3,94 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Byron Mutimusakwa — Portfolio Stats</title>
+<title>Byron Mutimusakwa · Video Editor</title>
+<meta name="description" content="Video editor working in DaVinci Resolve and Fusion. Story first, cinematic edits for creators." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="grid" id="grid"></main>
-  <p class="footnote" id="footnote">Glimpse at how some of my work has succeeded · 🌾</p>
+  <main class="page">
+
+    <header class="hero">
+      <div class="avatar">
+        <span class="avatar-initials">BM</span>
+        <img src="headshot.jpg" alt="Byron Mutimusakwa" onerror="this.remove()" />
+      </div>
+      <div class="hero-text">
+        <h1>Byron Mutimusakwa</h1>
+        <p class="tagline">Video editor working in DaVinci Resolve and Fusion</p>
+      </div>
+    </header>
+
+    <nav class="site-nav">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>I edit with DaVinci Resolve and Fusion, and I like spending real time with a project before I touch anything. Not just cutting to hit a deadline, but actually shaping the raw footage into something that has a pulse to it. I care about story structure: pacing that keeps people watching, cuts that mean something, motion and color that support the message instead of trying to show off.</p>
+      <p>Most of my work has been long form educational and entertainment content, mostly cybersecurity and hacking videos for YouTube. The real challenge there is keeping technical material genuinely watchable without losing the substance. That has taught me to think like a storyteller first and an editor second. How to build curiosity into a cold open, how to pace a fifteen minute tutorial so it never drags, and how to use Fusion to add just enough visual polish to make dense material feel cinematic instead of dry.</p>
+      <p class="skills"><strong>Skills:</strong> DaVinci Resolve, Fusion (motion graphics and compositing), color grading, story pacing and structure, sound design, retention editing for long form YouTube.</p>
+    </section>
+
+    <section id="work" class="section">
+      <h2>Recent Work</h2>
+      <p class="section-intro">Six recent edits, mostly deep dive cybersecurity and hacking content for YouTube.</p>
+      <div class="grid" id="grid"></div>
+      <p class="footnote" id="footnote">stats update live each visit · 🌾</p>
+    </section>
+
+    <section id="pricing" class="section">
+      <h2>Pricing</h2>
+      <p>I charge per video, based on length and complexity. Always open to negotiating, especially for ongoing work.</p>
+
+      <div class="price-table">
+        <div class="price-row price-head">
+          <span>Length</span>
+          <span>Starting at</span>
+          <span>What's included</span>
+        </div>
+        <div class="price-row">
+          <span>Under 3 min</span>
+          <span>$100–200</span>
+          <span>Clips, trailers, shorts</span>
+        </div>
+        <div class="price-row">
+          <span>3–10 min</span>
+          <span>$250–500</span>
+          <span>Standard YouTube video: graphics, color, sound</span>
+        </div>
+        <div class="price-row">
+          <span>10–20 min</span>
+          <span>$500–900</span>
+          <span>Retention editing, heavier Fusion and graphics work</span>
+        </div>
+        <div class="price-row">
+          <span>20+ min</span>
+          <span>Custom quote, starting at $900</span>
+          <span>Deep dive or multi part projects</span>
+        </div>
+      </div>
+
+      <p class="fine-print">All rates are starting points. The final quote depends on raw footage length, complexity, and turnaround time.</p>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <h2>Let's work together</h2>
+      <p>Got a video that needs a story? Email me with the project and I'll send a quote.</p>
+      <a class="contact-button" href="mailto:byronmutimusakwa@yahoo.com">byronmutimusakwa@yahoo.com</a>
+    </section>
+
+    <footer class="site-footer">
+      <p>Made with care · 🌾</p>
+    </footer>
+
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
