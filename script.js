@@ -73,17 +73,33 @@ async function fetchStats(ids) {
   }
 }
 
-function animateCount(el, target, duration = 1400) {
+function animateCount(el, target, duration = 1400, format = formatCompact) {
   const start = performance.now();
   function tick(now) {
     const progress = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
     const value = Math.round(target * eased);
-    el.textContent = formatCompact(value);
+    el.textContent = format(value);
     if (progress < 1) requestAnimationFrame(tick);
-    else el.textContent = formatCompact(target);
+    else el.textContent = format(target);
   }
   requestAnimationFrame(tick);
+}
+
+function setUpGrowthStats() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = Number(entry.target.dataset.target || 0);
+          animateCount(entry.target, target, 1400, (n) => new Intl.NumberFormat("en").format(n));
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  document.querySelectorAll(".growth-num[data-target]").forEach((el) => observer.observe(el));
 }
 
 function setUpScrollAnimation() {
@@ -133,3 +149,4 @@ async function render() {
 }
 
 render();
+setUpGrowthStats();
